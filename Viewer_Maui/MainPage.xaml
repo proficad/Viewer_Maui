@@ -1,8 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="Viewer_Maui.MainPage">
 
+
+
+    <skia:SKCanvasView x:Name="skiaView" PaintSurface="OnPaintSurface"
+                       EnableTouchEvents="True" Touch="OnTouch"
+                       IgnorePixelScaling="True" />
+
+    
+    
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
@@ -16,7 +25,7 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Hello, My World!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
