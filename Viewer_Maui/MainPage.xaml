@@ -10,10 +10,12 @@
                        EnableTouchEvents="True" 
                        IgnorePixelScaling="True"
                        PaintSurface="skiaView_PaintSurface"
-                       WidthRequest="500"
-                       HeightRequest="500"
-                       VerticalOptions="CenterAndExpand"
-                       HorizontalOptions="CenterAndExpand" />
+                       
+                       
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       
+                       />
 
 
 

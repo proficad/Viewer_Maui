@@ -12,8 +12,10 @@ public partial class MainPage : ContentPage
 
 
 
-//		skiaView = new SkiaSharp.Views.Maui.Controls.SKCanvasView();
+        //		skiaView = new SkiaSharp.Views.Maui.Controls.SKCanvasView();
 
+
+        Content = skiaView;
 	}
 
 
