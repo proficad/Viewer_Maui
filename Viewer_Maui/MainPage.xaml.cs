@@ -11,11 +11,6 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 
 
-
-        //		skiaView = new SkiaSharp.Views.Maui.Controls.SKCanvasView();
-
-
-        Content = skiaView;
 	}
 
 
@@ -41,8 +36,8 @@ public partial class MainPage : ContentPage
         SKPaint paint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
-            Color = SkiaSharp.SKColors.Aqua,
-            StrokeWidth = 25
+            Color = SkiaSharp.SKColors.Chocolate,
+            StrokeWidth = 5
         };
 
         canvas.DrawCircle(100, 100, 20, paint); 

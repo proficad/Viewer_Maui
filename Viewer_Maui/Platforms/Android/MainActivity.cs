@@ -25,6 +25,9 @@ public class MainActivity : MauiAppCompatActivity
             int yy = 88;
         }
 
+        //Viewer_Maui.App myApp = (Viewer_Maui.App)Viewer_Maui.MainApplication.Current.Application;
+
+ 
         
         base.OnCreate(savedInstanceState);
     }

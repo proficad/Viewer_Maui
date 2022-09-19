@@ -9,8 +9,7 @@
 				<data
 				  android:mimeType="application/octet-stream"
 				  android:host="*"
-				  android:pathPattern=".*\\.sxe"
-  />
+				  android:pathPattern=".*\\.sxe" />
 			</intent-filter>
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
@@ -19,8 +18,7 @@
 				<data
 				  android:mimeType="application/mytype"
 				  android:host="*"
-				  android:pathPattern=".*\\.sxe"
-  />
+				  android:pathPattern=".*\\.sxe" />
 			</intent-filter>
 		</activity>
 
