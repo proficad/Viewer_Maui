@@ -5,7 +5,7 @@ namespace Viewer_Maui;
 public partial class MainPage : ContentPage
 {
 
-
+    public static System.IO.Stream m_drawing_path;
 	public MainPage()
 	{
 		InitializeComponent();

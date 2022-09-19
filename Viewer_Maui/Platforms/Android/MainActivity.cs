@@ -14,21 +14,11 @@ public class MainActivity : MauiAppCompatActivity
     {
         int o = 5;
     }
-
+    
     protected override void OnCreate(Bundle? savedInstanceState)
     {
-        int u = 5;
-
-        if (Intent.Type == "text/plain" && Intent.Action == "android.intent.action.SEND")
-        {
-            //handleSendUrl();
-            int yy = 88;
-        }
-
-        //Viewer_Maui.App myApp = (Viewer_Maui.App)Viewer_Maui.MainApplication.Current.Application;
-
- 
-        
-        base.OnCreate(savedInstanceState);
+    
+        base.OnCreate(savedInstanceState);//it crashes here
+     
     }
 }
