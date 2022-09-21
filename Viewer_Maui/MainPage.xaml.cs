@@ -40,8 +40,16 @@ public partial class MainPage : ContentPage
             StrokeWidth = 5
         };
 
+        SKPaint l_paint_text = paint.Clone();
+        l_paint_text.StrokeWidth = 1;
+        l_paint_text.Color = SkiaSharp.SKColors.Blue;
+
+
         canvas.DrawCircle(100, 100, 20, paint); 
 
+        string ls_has_stream = (MyContext.m_stream != null) ? "yes" : "no";
+
+        canvas.DrawText(ls_has_stream, 100, 200, l_paint_text);
 
     }
 }

@@ -12,13 +12,19 @@ public class MainActivity : MauiAppCompatActivity
 {
     protected override void OnNewIntent(Intent? intent)
     {
-        int o = 5;
+        //int o = 5;
     }
     
     protected override void OnCreate(Bundle? savedInstanceState)
     {
     
         base.OnCreate(savedInstanceState);//it crashes here
-     
+
+        Android.Net.Uri uri = Intent.Data;
+        if (uri != null)
+        {
+            MyContext.m_stream = ContentResolver.OpenInputStream(uri);
+        }
+
     }
 }
