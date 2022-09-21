@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿#nullable enable
+
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Content;
@@ -14,17 +16,24 @@ public class MainActivity : MauiAppCompatActivity
     {
         //int o = 5;
     }
-    
+
     protected override void OnCreate(Bundle? savedInstanceState)
     {
-    
+
         base.OnCreate(savedInstanceState);//it crashes here
 
-        Android.Net.Uri uri = Intent.Data;
-        if (uri != null)
+
+        if (Intent?.Data is not null)
         {
-            MyContext.m_stream = ContentResolver.OpenInputStream(uri);
+            Android.Net.Uri uri = Intent.Data;
+
+            if (ContentResolver is not null)
+            {
+                MyContext.m_stream = ContentResolver.OpenInputStream(uri);
+            }
+
         }
+
 
     }
 }
