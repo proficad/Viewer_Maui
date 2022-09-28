@@ -52,5 +52,27 @@ public partial class MainPage : ContentPage
         canvas.DrawText(ls_has_stream, 100, 200, l_paint_text);
 
     }
+
+    private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
+    {
+        double x = 0, y = 0;
+        switch (e.StatusType)
+        {
+            case GestureStatus.Running:
+                // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
+                Content.TranslationX = Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Content.Width - DeviceDisplay.MainDisplayInfo.Width));
+                Content.TranslationY = Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Content.Height - DeviceDisplay.MainDisplayInfo.Height));
+                break;
+
+            case GestureStatus.Completed:
+                // Store the translation applied during the pan
+                x = Content.TranslationX;
+                y = Content.TranslationY;
+                break;
+        }
+
+        System.Diagnostics.Debug.WriteLine("x=" + x);
+        System.Diagnostics.Debug.WriteLine("y=" + y);
+    }
 }
 

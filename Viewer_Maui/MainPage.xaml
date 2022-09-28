@@ -13,9 +13,16 @@
                        
                        
                        HorizontalOptions="FillAndExpand"
-                       VerticalOptions="FillAndExpand"
-                       
-                       />
+                       VerticalOptions="FillAndExpand">
+
+
+        <skia:SKCanvasView.GestureRecognizers>
+            <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"></PanGestureRecognizer>
+        </skia:SKCanvasView.GestureRecognizers>
+
+    </skia:SKCanvasView>
+
+        
 
 
 
